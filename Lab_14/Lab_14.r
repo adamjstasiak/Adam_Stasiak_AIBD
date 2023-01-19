@@ -40,8 +40,7 @@ ggsave("/home/rplot2.jpg",plot = plots)
 x <- iris[,1:4]
 y <- iris[,5]
 
-sum_sqr <- lst() #Tutaj nie jestem pewien czy oni chcą wynik z tego wzoru z pierwaistkiem itp czy oni chcą tą listę co na początku stworzyliśmy musisz podczas odpalania zoabczyć. Wydaje mi się ze chodzi o ten wynik i tak wpisałem
-
+sum_sqr <- c() 
 for(i in 1:10){
     kmeans_result <- kmeans(x, i)
     sum_sqr <- append(sum_sqr, kmeans_result$tot.withinss)
