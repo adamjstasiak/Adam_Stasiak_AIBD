@@ -27,7 +27,7 @@ print(spc)
 # Zadanie 2
 
 plots <- ggplot(iris,aes(x=Sepal.Width))+
-    geom_histogram(aes(fill=Species,color=Species),binwidth=20) + 
+    geom_histogram(aes(fill=Species,color=Species),bins=20) + 
     geom_vline(data=spc,aes(xintercept=Sepal.Width,color=Species),linetype="dashed")+
     labs(x='x_axis',y='y_axis',title='title')
 ggsave("/home/rplot.jpg",plot = plots)
